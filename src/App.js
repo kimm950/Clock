@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 
+
+const ClockContainer = styled.div`
+
+`
+
 class Clock extends Component {
   constructor(props) {
     super(props)
@@ -22,9 +27,11 @@ class Clock extends Component {
   render() {
     const { date } = this.state
     return (
-      <Clock>
-        {date.getHours()} : {date.getMinutes()} : {date.getSeconds()} : {date.getMilliseconds()}
-      </Clock>
+      <ClockContainer>
+        <div>
+          {date.getHours()} : {date.getMinutes()} : {date.getSeconds()} : {date.getMilliseconds()}
+        </div>
+      </ClockContainer>
     );
   }
 }
