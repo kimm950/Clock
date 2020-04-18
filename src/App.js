@@ -8,7 +8,7 @@ class Clock extends Component {
   }
 
   componentDidMount() {
-    this.timeID = setInterval(() => this.Run(), 1000)
+    this.timeID = setInterval(() => this.Run(), 10)
   }
 
   componentWillMount() {
@@ -22,9 +22,9 @@ class Clock extends Component {
   render() {
     const { date } = this.state
     return (
-      <div>
-        {date.getHours()}
-      </div>
+      <Clock>
+        {date.getHours()} : {date.getMinutes()} : {date.getSeconds()} : {date.getMilliseconds()}
+      </Clock>
     );
   }
 }
