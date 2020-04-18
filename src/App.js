@@ -37,7 +37,7 @@ class Clock extends Component {
     return (
       <ClockContainer>
         <div className="month-date">
-          {date.getFullYear()} / {date.getMonth()} / {date.getDate()}
+          {date.getFullYear()} / {date.getMonth() + 1} / {date.getDate()}
         </div>
         <div className="time">
           {date.getHours()} : {date.getMinutes()} : {date.getSeconds()} : {date.getMilliseconds()}
