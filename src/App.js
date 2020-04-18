@@ -8,11 +8,15 @@ class Clock extends Component {
   }
 
   componentDidMount() {
-    this.timeID = setInterval(() => this.Change(), 1000)
+    this.timeID = setInterval(() => this.Run(), 1000)
   }
 
   componentWillMount() {
-    clearInterval()
+    clearInterval(this.timeID)
+  }
+
+  Run = () => {
+    this.setState({ date: new Date() })
   }
 
   render() {
